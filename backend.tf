@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "akash-terraform-backend"
-    key    = "infra"
+    key    = "infra/terraform.tfstate"
     region = "ap-south-1"
   }
 }
