@@ -35,7 +35,7 @@ resource "aws_network_interface" "private" {
 resource "aws_instance" "public" {
   ami           = "ami-06984ea821ac0a879"
   instance_type = "t2.micro"
-  key_name	= "terraform.pem"
+ # key_name	= "terraform"
 
   network_interface {
     network_interface_id = aws_network_interface.public.id
@@ -50,7 +50,7 @@ resource "aws_instance" "public" {
 resource "aws_instance" "private" {
   ami           = "ami-06984ea821ac0a879"
   instance_type = "t2.micro"
-  key_name	= "terraform.pem"  
+#  key_name	= "terraform"  
 
   network_interface {
     network_interface_id = aws_network_interface.private.id
