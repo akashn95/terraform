@@ -16,7 +16,7 @@
 
 resource "aws_network_interface" "public" {
   subnet_id   = var.public_subnet
-  private_ips = ["10.0.1.2"]
+  private_ips = ["10.0.1.5"]
 
   tags = {
     Name = "private-network-interface"
@@ -25,7 +25,7 @@ resource "aws_network_interface" "public" {
 
 resource "aws_network_interface" "private" {
   subnet_id   = var.private_subnet
-  private_ips = ["10.0.2.2"]
+  private_ips = ["10.0.2.5"]
 
   tags = {
     Name = "public-network-interface"
